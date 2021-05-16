@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit A Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link th:href="@{/styles.css}" th:rel="stylesheet">
+</head>
+<body>
+<div class="container pt-3">
+    <h2>Disaster Recovery Application: Time Card Submission</h2>
+    <div class="row">
+        <h4>Edit A Machine</h4>
+        <form th:action="@{/save_machine}" th:object="${machine}" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td class="description-column">Machine ID</td>
+                    <td>
+                        <input type="text" th:field="*{id}" readonly
+                               class="form-control custom-input-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="description-column">Machine Code</td>
+                    <td>
+                        <input type="text" th:field="*{machineCode}"
+                               class="form-control custom-input-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="description-column">Description</td>
+                    <td>
+                        <input type="text" th:field="*{description}"
+                               class="form-control custom-input-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="description-column">Hourly Rent</td>
+                    <td>
+                        <input type="text" th:field="*{hourlyRent}"
+                               class="form-control custom-input-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="description-column">Maximum Hours Per Day</td>
+                    <td>
+                        <input type="text" th:field="*{maxHoursPerDay}"
+                               class="form-control custom-input-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Save
+                        </button>
+                        <a th:href="@{/machine_mgmt}"
+                           class="btn btn-outline-secondary" role="button">
+                            Cancel
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
