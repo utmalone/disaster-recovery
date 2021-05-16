@@ -80,9 +80,19 @@
     	<artifactId>dockerfile-maven-plugin</artifactId>
     	<version>1.4.12</version>
     	<configuration>
-    	<repository>${docker.image.prefix}/${project.artifactId}</repository>
+    	<repository>utmalone/${project.artifactId}</repository>
     	<buildArgs><JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE></buildArgs>
     	</configuration>
+    	<executions>
+    	<execution>
+    	<id>default</id>
+    	<phase>install</phase>
+    	<goals>
+    	<goal>build</goal>
+    	<goal>push</goal>
+    	</goals>
+    	</execution>
+    	</executions>
     	</plugin>
 		</plugins>
 		<finalName>disasterrecovery</finalName>
