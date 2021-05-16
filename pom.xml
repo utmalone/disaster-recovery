@@ -84,8 +84,8 @@
     	<buildArgs><JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE></buildArgs>
     	</configuration>
     	</plugin>
-   
 		</plugins>
+		<finalName>disasterrecovery</finalName>
 	</build>
 
 </project>
