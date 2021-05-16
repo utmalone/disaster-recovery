@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>8</java.version>
+		<docker.image.prefix>nullbeans</docker.image.prefix>
 	</properties>
 	<dependencies>
 	
@@ -73,81 +74,16 @@
     		<plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-<!--             <configuration>
-                <executable>true</executable>
-            </configuration> -->
-             <!--  <plugin>
-    <groupId>io.fabric8</groupId>
-    <artifactId>docker-maven-plugin</artifactId>
-    <version>0.23.0</version>
-    <configuration>
-      <images>
-        <image>
-          <alias>db</alias>
-          <name>it_ledger_database</name>
-          <build>
-            <from>mariadb:latest</from>
-          </build>
-          <run>
-            <ports>
-              <port>3306:3306</port>
-            </ports>
-            <env>
-              <MYSQL_ROOT_PASSWORD>xxxx</MYSQL_ROOT_PASSWORD>
-              <MYSQL_DATABASE>ledger</MYSQL_DATABASE>
-            </env>
-            <log>
-              <date>default</date>
-              <color>MAGENTA</color>
-            </log>
-            <wait>
-              <log>.*mysqld: ready for connections.*</log>
-              <time>100000</time>
-            </wait>
-          </run>
-        </image>
-      </images>
-    </configuration>
-    <executions>
-      <execution>
-        <id>start</id>
-        <phase>pre-integration-test</phase>
-        <goals>
-          <goal>build</goal>
-          <goal>start</goal>
-        </goals>
-      </execution>
-      <execution>
-        <id>stop</id>
-        <phase>post-integration-test</phase>
-        <goals>
-          <goal>stop</goal>
-        </goals>
-      </execution>
-    </executions>
-  </plugin>
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-failsafe-plugin</artifactId>
-    <executions>
-      <execution>
-        <goals>
-          <goal>integration-test</goal>
-          <goal>verify</goal>
-        </goals>
-      </execution>
-    </executions>
-  </plugin>
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <configuration>
-      <excludes>
-        <exclude>**/IT*.java</exclude>
-      </excludes>
-    </configuration>
-  </plugin> -->
-    </plugin>
+    	</plugin>
+    	<plugin>
+    	<groupId>com.spotify</groupId>
+    	<artifactId>dockerfile-maven-plugin</artifactId>
+    	<version>1.4.12</version>
+    	<configuration>
+    	<repository>${docker.image.prefix}/${project.artifactId}</repository>
+    	<buildArgs><JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE></buildArgs>
+    	</configuration>
+    	</plugin>
    
 		</plugins>
 	</build>
