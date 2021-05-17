@@ -22,29 +22,29 @@ class EmployeeApp4ApplicationTests {
 //	private MachineService ms;
 	
 
-	@Test
-	void securityAuthentication() {
-//		sc.authenticationProvider();
-//		sc.passwordEncoder();
-	}
 //	@Test
-//	void registrationDtoTest() {
-////		urDto.getClass();
-////		urDto.getEmail();
-////		urDto.getFirstName();
-////		urDto.getLastName();
-////		urDto.getPassword();
-////		urDto.getTitle();
-////		urDto.toString();
+//	void securityAuthentication() {
+////		sc.authenticationProvider();
+////		sc.passwordEncoder();
 //	}
-//	
-//	@Test
-//	void jobsServiceTest() {
-////		js.findAllJobs();
-//	}
-//	
-//	@Test
-//	void machineServiceTest() {
-////		ms.findAllMachines();
-//	}
+////	@Test
+////	void registrationDtoTest() {
+//////		urDto.getClass();
+//////		urDto.getEmail();
+//////		urDto.getFirstName();
+//////		urDto.getLastName();
+//////		urDto.getPassword();
+//////		urDto.getTitle();
+//////		urDto.toString();
+////	}
+////	
+////	@Test
+////	void jobsServiceTest() {
+//////		js.findAllJobs();
+////	}
+////	
+////	@Test
+////	void machineServiceTest() {
+//////		ms.findAllMachines();
+////	}
 }
