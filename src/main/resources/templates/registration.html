@@ -66,11 +66,22 @@
 							th:field="*{password}" required autofocus="autofocus" />
 					</div>
 					
-					  <div class="form-group">
+<!-- 					  <div class="form-group">
 					    <input type="checkbox" class="form-check-input" id="title" th:field="*{title}"
-							required autofocus="autofocus" value="Admin" />
+							 value="Admin" />
 					    <label class="form-check-label" for="title">Admin</label>
-					  </div>
+					    <input type="checkbox" class="form-check-input" id="title" th:field="*{title}"
+							 value="Contractor" />
+					    <label class="form-check-label" for="title">Contractor</label>
+					  </div> -->
+					  
+					    <div class="form-group">
+						    <label for="title">Select Role</label>
+						    <select th:field="*{title}" class="form-control" id="exampleFormControlSelect1">
+						      <option value="ADMIN">Admin</option>
+						      <option value="USER">Contractor</option>
+						    </select>
+						  </div>
 
 					<div class="form-group">
 						<button type="submit" class="btn btn-success">Register</button>

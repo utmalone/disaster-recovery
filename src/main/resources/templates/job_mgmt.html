@@ -12,10 +12,10 @@
         <h2>Disaster Recovery Application: Time Card Submission</h2>
         <div class="row">
             <div class="col-sm-3 left-column">
-                <a th:href="@{/job_mgmt}">Job Management</a><br>
-                <a th:href="@{/machine_mgmt}">Machine Management</a><br>
-                <a th:href="@{/time_card_approval}">Time Card Approval</a><br>
-				<a th:href="@{/logout}">Logout</a>
+                <a sec:authorize="hasAnyAuthority('USER', 'ADMIN')" th:href="@{/job_mgmt}">Job Management</a><br>
+                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/machine_mgmt}">Machine Management</a><br>
+                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/time_card_approval}">Time Card Approval</a><br>
+				<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')" th:href="@{/logout}">Logout</a>
 				
             </div>
             <div class="col-sm-9">

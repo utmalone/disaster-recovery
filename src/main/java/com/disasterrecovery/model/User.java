@@ -49,13 +49,12 @@ public class User {
 		
 	}
 	
-	public User(String firstName, String lastName, String email, String password, String title, Collection<Role> roles) {
+	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.title = title;
 		this.roles = roles;
 	}
 	public Long getId() {
