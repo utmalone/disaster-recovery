@@ -30,6 +30,7 @@ public class Jobs {
     this.maxHoursPerDay = maxHoursPerDay;
   }
 
+
   public Long getId() {
     return id;
   }
