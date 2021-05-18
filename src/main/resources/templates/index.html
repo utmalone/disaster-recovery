@@ -22,7 +22,7 @@
 
   <body class="text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
           <nav class="nav nav-masthead justify-content-center">
           		<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')"th:href="@{/}" class="navi nav-link active">Home</a>
                 <a sec:authorize="hasAnyAuthority('USER')"th:href="@{/time_card_submission}" class="nav-link">Time Card Submission</a>
@@ -36,7 +36,6 @@
             <a class="nav-link" href="#">Contact</a> -->
           </nav>
           <div>
-         <!-- <h3 class="welcome-h3 animated bounce infinite">Welcome To</h3> -->
          <h1 class="dr-h1">DISASTE</h1><h1 class="big-r">R</h1><h1 class="dr2-h1">ECOVERY</h1>
     	</div>
     </div>
