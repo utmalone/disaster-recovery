@@ -10,12 +10,6 @@
 	margin:-150px;
 }
 
-.welcome-h3{
-	color: #ededd0;
-	padding-top: 150px;
-	padding-bottom: 50px;
-}
-
 .dr-h1, .dr2-h1{
 	position:relative;
 	font-size:100px;
@@ -23,6 +17,7 @@
 }
 
 .dr-h1{
+	padding-top: 300px;
 	color: #907fa4;
 	text-align:left;
 	right:8.7rem;
