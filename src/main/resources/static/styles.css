@@ -17,15 +17,15 @@
 }
 
 .dr-h1{
+	right:-1rem;
 	padding-top: 300px;
 	color: #907fa4;
 	text-align:left;
-	right:6.5rem;
 }
 
 .dr2-h1{
 	color: #a6d6d6;
-	left:9.9rem;
+	left:2.5rem;
 	top: 2px;
 	text-align:right;
 }
