@@ -36,7 +36,7 @@ public class MainController {
 	
 	@GetMapping("/")
 	public String home() {
-		return "job_mgmt";
+		return "index";
 	}
 	
 	  @GetMapping("/api/jobs")

@@ -8,18 +8,26 @@
     <link th:href="@{/styles.css}" th:rel="stylesheet">
 </head>
 <body>
-<div class="container pt-3">
-    <h2>Disaster Recovery Application:</h2>
-    <div class="row">
-        <div class="col-sm-2 left-column">
-                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/job_mgmt}">Job Management</a><br>
-                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/machine_mgmt}">Machine Management</a><br>
-                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/time_card_approval}">Time Card Approval</a><br>
-                <a sec:authorize="hasAnyAuthority('USER', 'ADMIN')"th:href="@{/time_card_submission}">Time Card Submission</a><br><br>
-				<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')" th:href="@{/logout}">Logout</a>
-        </div>
-        <div class="col-sm-9">
-            <h4 class="left-column">Time Card Approval</h4>
+
+<div class=" d-flex p-3 mx-auto flex-column">
+          <nav class="nav nav-masthead justify-content-center">
+          		<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')"th:href="@{/}" class="nav-link" >Home</a>
+                <a sec:authorize="hasAnyAuthority('USER')"th:href="@{/time_card_submission}" class="nav-link">Time Card Submission</a>
+                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/job_mgmt}" class="nav-link">Job Management</a>
+                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/machine_mgmt}" class="nav-link">Machine Management</a>
+                <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/time_card_approval}" class="nav-link active">Time Card Approval</a>                
+				<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')" th:href="@{/logout}" class="nav-link">Logout</a>
+
+<!--             <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a> -->
+          </nav>
+          <br>
+          <br>
+          <br>
+          <br>
+			<div>
+			<h4 class="left-column">Time Card Approval</h4>
             <br>
             <div class="to-the-right">&nbsp;</div>
             <table class="table table-striped table-bordered">
@@ -49,8 +57,15 @@
                 </tbody>
             </table>
         </div>
-    </div>
-</div>
+          
+          
+          
+          
+     </div>
+
+ 
+
+        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
