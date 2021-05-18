@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="container pt-3">
-        <h2>Disaster Recovery Application: Time Card Submission</h2>
+        <h2>Disaster Recovery Application:</h2>
         <div class="row">
-            <div class="col-sm-3 left-column">
+            <div class="col-sm-2 left-column">
                 <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/job_mgmt}">Job Management</a><br>
                 <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/machine_mgmt}">Machine Management</a><br>
                 <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/time_card_approval}">Time Card Approval</a><br>
-                <a sec:authorize="hasAnyAuthority('USER', 'ADMIN')">Time Card Submission</a><br>
+                <a sec:authorize="hasAnyAuthority('USER', 'ADMIN')"th:href="@{/time_card_submission}">Time Card Submission</a><br><br>
 				<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')" th:href="@{/logout}">Logout</a>
             </div>
             <div class="col-sm-9">
