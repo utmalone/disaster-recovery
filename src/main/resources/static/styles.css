@@ -5,7 +5,7 @@
 
 .big-r{
 	position: relative;
-	bottom: 5px;
+	bottom: 10px;
 	font-size:200px;
 	margin:-150px;
 }
@@ -17,15 +17,16 @@
 }
 
 .dr-h1{
-	right:-1rem;
+
 	padding-top: 300px;
 	color: #907fa4;
 	text-align:left;
+	margin-left:445px;
 }
 
 .dr2-h1{
 	color: #a6d6d6;
-	left:2.5rem;
+	margin-right:390px;
 	top: 2px;
 	text-align:right;
 }

@@ -22,7 +22,7 @@
 
   <body class="text-center">
 
-    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="container-fluid d-flex h-100 p-3 mx-auto flex-column">
           <nav class="nav nav-masthead justify-content-center">
           		<a sec:authorize="hasAnyAuthority('USER', 'ADMIN')"th:href="@{/}" class="navi nav-link active">Home</a>
                 <a sec:authorize="hasAnyAuthority('USER')"th:href="@{/time_card_submission}" class="nav-link">Time Card Submission</a>
