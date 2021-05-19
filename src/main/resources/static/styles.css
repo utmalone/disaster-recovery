@@ -35,6 +35,11 @@
     float: right;
 }
 
+#go-back-btn {
+    display: none;
+}
+
+
 th, td {
 	color:#fff;
 	vertical-align: middle;
@@ -49,16 +54,17 @@ th, td {
     width: 300px;
 }
 
-#job-entry div {
-    width: 330px;
+#job-entry div, #machine-entry div {
+    width: 354px;
     padding: 15px;
     border: 1px #efefef solid;
     display: inline-block;
 }
 
-#job-entry {
+#job-entry, #machine-entry {
     border: 2px #efefef solid;
     border-radius: 5px;
+    margin-bottom: 15px;
 } */
 
 /*
