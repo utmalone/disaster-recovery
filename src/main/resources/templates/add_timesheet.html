@@ -12,12 +12,12 @@
     <h2>Disaster Recovery Application: Time Card Submission</h2>
     <div class="row">
         <div class="col-sm-2 left-column">
-            <a th:href="@{/time_card_submission}">Back</a>
+            <a th:href="@{/time_card_submission}">Time Card Submission</a>
         </div>
         <div class="col-sm-10">
             <h4 class="left-column">Add Timesheet</h4>
 
-            <label for="job-code">Job Code:</label>
+            <label for="job-code">Site Code:</label>
             <input type="text" class="form-control custom-input-width" id="job-code">
 
             <label for="contractor-name">Contractor Name:</label>
@@ -27,6 +27,7 @@
             <label for="job-code">Date</label>
             <input type="text" class="form-control custom-input-width"
                    id="date" placeholder="mm-dd-yyyy">
+            <div>&nbsp;</div>
             <h4>Job Entry</h4>
             <form>
                 <div id="job-entry">
@@ -68,7 +69,63 @@
                     </div>
                 </div>
                 <a id="add-job-btn" class="btn btn-outline-primary" role="button">Add Job Entry</a>
-                <a id="submit-btn" class="btn btn-primary">Submit</a>
+
+                <div>&nbsp;</div>
+                <h4>Machine Entry</h4>
+
+                <div id="machine-entry">
+                    <div>
+                        Machine Code
+                        <select class="form-control custom-input-width" type="text">
+                            <option value="">Machine Code</option>
+                        </select>
+
+                        Hours Used
+                        <input class="form-control custom-input-width"
+                               id="mc-1">
+
+                        Total Rent Price
+                        <input class="form-control custom-input-width"
+                               type="text" readonly id="mc-t-1">
+                    </div>
+                    <div>
+                        Machine Code
+                        <select class="form-control custom-input-width" type="text">
+                            <option value="">Machine Code</option>
+                        </select>
+
+                        Hours Used
+                        <input class="form-control custom-input-width"
+                               id="mc-2">
+
+                        Total Rent Price
+                        <input class="form-control custom-input-width"
+                               type="text" readonly id="mc-t-2">
+                    </div>
+                    <div>
+                        Machine Code
+                        <select class="form-control custom-input-width" type="text">
+                            <option value="">Machine Code</option>
+                        </select>
+
+                        Hours Used
+                        <input class="form-control custom-input-width"
+                               id="mc-3">
+
+                        Total Rent Price
+                        <input class="form-control custom-input-width"
+                               type="text" readonly id="mc-t-3">
+                    </div>
+                </div>
+                <a id="add-machine-btn" class="btn btn-outline-primary"
+                   role="button">Add Machine Entry</a>
+
+                <button id="submit-btn" class="btn btn-primary"
+                        type="button">Submit
+                </button>
+                <a id="go-back-btn" class="btn btn-secondary"
+                   role="button" href="#">Go Back</a>
+                <div>&nbsp;</div>
             </form>
         </div>
     </div>
